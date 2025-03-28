@@ -1,0 +1,8 @@
+{
+
+  "see_all_qa_button": {
+    "type": "xpath",
+    "value": "//a[normalize-space()='See all QA jobs']"
+  }
+
+}

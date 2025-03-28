@@ -1,0 +1,13 @@
+<suite name="Insider Test Suite">
+    <parameter name="browser" value="firefox"/>   <!-- BU SEVİYEDE TANIMLANDI -->
+
+    <test name="Insider Navigation Tests">
+        <classes>
+            <class name="tests.insiderHomeTest"/>
+            <class name="tests.career.careerTest"/>
+            <class name="tests.career.careerQualityAssuranceTest"/>
+            <class name="tests.career.careerOpenPositionsTest"/>
+            <!-- Yeni test sınıflarını buraya eklersin -->
+        </classes>
+    </test>
+</suite>

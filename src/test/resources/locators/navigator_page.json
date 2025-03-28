@@ -1,0 +1,66 @@
+{
+  "insider_logo": {
+    "type": "css",
+    "value": "a.navbar-brand"
+  },
+  "why_insider_menu": {
+    "type": "xpath",
+    "value": "//a[normalize-space()='Why Insider']"
+  },
+  "platform_menu": {
+    "type": "xpath",
+    "value": "//a[normalize-space()='Platform']"
+  },
+  "solutions_menu": {
+    "type": "xpath",
+    "value": "//a[normalize-space()='Solutions']"
+  },
+  "customers_menu": {
+    "type": "xpath",
+    "value": "//a[normalize-space()='Customers']"
+  },
+  "resources_menu": {
+    "type": "xpath",
+    "value": "//a[normalize-space()='Resources']"
+  },
+  "company_menu": {
+    "type": "xpath",
+    "value": "//a[normalize-space()='Company']"
+  },
+  "explore_insider_menu": {
+    "type": "id",
+    "value": "highlight-en"
+  },
+  "about_us_menu": {
+    "type": "xpath",
+    "value": "//a[normalize-space()='About Us']"
+  },
+  "newsroom_menu": {
+    "type": "xpath",
+    "value": "//a[normalize-space()='Newsroom']"
+  },
+  "partnerships_menu": {
+    "type": "xpath",
+    "value": "//a[normalize-space()='Partnerships']"
+  },
+  "technology_partners_menu": {
+    "type": "xpath",
+    "value": "//a[normalize-space()='Technology Partners']"
+  },
+  "solution_partners_menu": {
+    "type": "xpath",
+    "value": "//a[normalize-space()='Solution Partners']"
+  },
+  "integrations_menu": {
+    "type": "xpath",
+    "value": "//a[@class='dropdown-sub'][normalize-space()='Integrations']"
+  },
+  "careers_menu": {
+    "type": "xpath",
+    "value": "//a[normalize-space()='Careers']"
+  },
+  "contact_us_menu": {
+    "type": "xpath",
+    "value": "//a[normalize-space()='Contact Us']"
+  }
+}

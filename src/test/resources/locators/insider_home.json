@@ -1,0 +1,14 @@
+{
+"language_dropdown": {
+"type": "id",
+"value": "lang-dropdown"
+},
+"login_button": {
+"type": "xpath",
+"value": "//a[normalize-space()='Login']"
+},
+"get_demo_button": {
+"type": "xpath",
+"value": "//a[normalize-space()='Get a Demo']"
+}
+}

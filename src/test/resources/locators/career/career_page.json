@@ -1,0 +1,27 @@
+{
+  "find_your_dream_job_button": {
+  "type": "xpath",
+  "value": "//a[contains(@class, 'btn-info') and text()='Find your dream job']"
+},
+  "locations_blocks": {
+    "type": "id",
+    "value": "location-slider"
+  },
+  "teams_block": {
+    "type": "css",
+    "value": ".col-12.d-flex.flex-wrap.p-0.career-load-more"
+  },
+  "life_at_insider_block": {
+    "type": "css",
+    "value": ".elementor-swiper"
+  },
+  "see_all_teams_button": {
+    "type": "xpath",
+    "value": "//a[normalize-space()='See all teams']"
+  },
+  "quality_assurance_button": {
+    "type": "xpath",
+    "value": "//h3[normalize-space()='Quality Assurance']"
+  }
+
+}

@@ -1,0 +1,39 @@
+{
+
+  "selected_department": {
+    "type": "id",
+    "value": "select2-filter-by-department-container"
+  },
+  "selected_location_input": {
+    "type": "id",
+    "value": "select2-filter-by-location-container"
+  },
+  "selected_location_value": {
+    "type": "xpath",
+    "value": "//li[contains(@data-select2-id, '{{LOCATION}}')]"
+  },
+  "jobs_list": {
+    "type": "id",
+    "value": "jobs-list"
+  },
+  "job_list_items": {
+    "type": "xpath",
+    "value": "//div[@id='jobs-list']//div[contains(@class, 'position-list-item')]"
+  },
+  "job_department": {
+    "type": "xpath",
+    "value": ".//span[contains(@class, 'position-department')]"
+  },
+  "job_location": {
+    "type": "xpath",
+    "value": ".//div[contains(@class, 'position-location')]"
+  },
+  "first_view_role_button": {
+    "type": "xpath",
+    "value": "(//a[contains(@class, 'btn') and contains(text(), 'View Role')])[1]"
+  }
+
+
+
+
+}
