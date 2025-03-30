@@ -1,79 +1,89 @@
 # uiOtomasyon
- pages/
- Her sayfaya ait işlemleri barındırır. Örneğin:
-•	navigatorPage.java → Ana menü işlemleri
-•	insiderHomePage.java → Anasayfa kontrolleri
-•	careerPage.java → Kariyer sayfası işlemleri
+pages/
+Her sayfaya ait işlemleri ve etkileşimleri barındırır.
+Örnek sınıflar:
 
+navigatorPage.java → Ana menü işlemleri
 
-🔹 resources/locators/
-Her sayfa için ayrı .json dosyaları:
-•	JSON yapısında locator’lar tutulur (örn: id, xpath, css)
-•	Örnek: navigator_page.json, career_page.json
-Locator’lar locatorReader sınıfıyla dinamik şekilde okunur.
+insiderHomePage.java → Anasayfa kontrolleri
 
-🔹 tests/
-Her sayfanın test senaryoları burada ayrı ayrı tanımlanır.
-•	careerTest.java
-•	insiderHomeTest.java
-•	careerOpenPositionsTest.java
+careerPage.java → Kariyer sayfası işlemleri
 
-🔹 utils/
-Ortak kullanılan sınıflar burada tutulur:
-•	baseTest → Tarayıcıyı başlatır, kapatır.
-•	driverFactory → Parametrik browser başlatır (Chrome, Firefox)
-•	configReader → config.properties üzerinden base_url gibi ayarları okur.
-•	generalAssertionHelpers → element_visible_control gibi doğrulama fonksiyonları
-•	locatorReader → JSON’dan locator alma işlemi
-•	screenshotUtil → Hatalı testlerde ekran görüntüsü alma
-🔹 config.properties
-•	Proje içi sabitleri buradan okursun (örnek: base_url, wait_time, user_email)
+resources/locators/
+Her sayfaya özel JSON dosyaları, sayfa elementlerinin locator bilgilerini içerir.
+Özellikler:
 
-🔹 testng.xml
-•	Test class’larını tanımlar
-•	Tüm testler için geçerli olacak parametreleri burada ayarlarsın (örn: browser=firefox)
+JSON yapısında id, xpath, css gibi locator’lar tutulur.
 
-________________________________________
+Örnek dosyalar:
 
-Kullanılan Önemli Yapılar
+navigator_page.json
 
+career_page.json
+
+Bu JSON’lar locatorReader sınıfı ile dinamik olarak okunur.
+
+tests/
+Tüm test senaryoları burada yer alır. Her test dosyası bir sayfayı hedef alır.
+Örnek test sınıfları:
+
+careerTest.java
+
+insiderHomeTest.java
+
+careerOpenPositionsTest.java
+
+utils/
+Ortak kullanılan yardımcı sınıflar:
+
+baseTest → Tarayıcı başlatma/kapama işlemleri
+
+driverFactory → Parametrik tarayıcı başlatımı (Chrome, Firefox)
+
+configReader → config.properties dosyasından ayar okuma
+
+generalAssertionHelpers → element_visible_control gibi doğrulamalar
+
+locatorReader → JSON dosyasından locator okuma
+
+screenshotUtil → Hatalı testlerde ekran görüntüsü alma
+
+config.properties
+Proje genelindeki sabitler bu dosyadan okunur.
+Örnek değişkenler:
+
+base_url
+
+wait_time
+
+user_email
+
+testng.xml
+TestNG yapılandırma dosyasıdır.
+
+Test class’ları burada tanımlanır
+
+Global parametreler burada verilir (örn: browser=firefox)
+
+🧩 Kullanılan Önemli Yapılar
 Yapı	Amaç
-baseTest	Ortak setup/teardown yapısı, tarayıcıyı aç/kapat
-driverFactory	Parametrik tarayıcı seçimi
-@Parameters("browser")	TestNG ile dışarıdan parametre alma
-locatorReader	Sayfaya özel JSON’dan locator’ı dinamik çekme
+baseTest	Setup/teardown işlemleri, tarayıcıyı aç/kapat
+driverFactory	Farklı tarayıcıları başlatma
+@Parameters("browser")	TestNG ile dışarıdan tarayıcı parametresi alma
+locatorReader	JSON dosyasından locator'ları dinamik çekme
 Actions	Hover gibi mouse etkileşimleri
 WebDriverWait + ExpectedConditions	Element görünene kadar bekleme
-@BeforeMethod / @AfterMethod	Her test öncesi/sonrası çalışan bloklar
+@BeforeMethod / @AfterMethod	Her test öncesi/sonrası çalışacak bloklar
+✍️ İsimlendirme Kuralları (Naming Conventions)
+Yapı	Format	Örnekler
+Class	camelCase	navigatorPage, careerOpenPositionsPage
+Değişken	snake_case	element_name, base_url, navigator_locator
+Method	snake_case	click_login_button(), verify_home_loaded()
+JSON Key	snake_case	"about_us_menu", "get_demo_button"
+✅ İlk Task Test Case Atamaları
+Aşağıda verilen ilk task kapsamındaki test case’lerin ait oldukları test sınıfları listelenmiştir:
 
-İsimlendirme Kuralları (Naming Convention)
-Yapı	Format	Örnek
-Class İsimleri
-
-	camelCase	navigatorPage, careerOpenPositionsPage
-
-
-Değişkenler	snake_case	element_name, base_url, navigator_locator
-
-
-Methodlar	snake_case	click_login_button(), verify_home_loaded()
-
-
-JSON Anahtarları
-
-	snake_case	"about_us_menu", "get_demo_button"
-
-
-
-
-Bana verilen 1. Taskın içindeki caseleri, şu class’ların içinde görüntüleyebilirsiniz.
-Test Case
-
-	Class Adı
-
-
-Case 1
-insiderHomeTest
+Test Case	Test Class
+Case 1	insiderHomeTest
 Case 2	careerTest
 Case 3-4-5	careerOpenPositionsTest
-
